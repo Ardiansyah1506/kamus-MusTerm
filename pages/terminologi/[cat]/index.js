@@ -191,6 +191,7 @@ export async function getServerSideProps(context) {
     references = response.data;
   } catch (error) {
     console.error("Error fetching data:", error);
+    console.log(url)
     references = [];
   }
 
