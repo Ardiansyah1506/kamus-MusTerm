@@ -12,14 +12,14 @@ export const Card = ({ label }) => {
       : "Akhiran dari suatu istilah yang merubah akar";
 
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-2xl shadow bg-gradient-dark dark:border-gray-700">
+    <div className="max-w-sm bg-white border  rounded-2xl shadow  border-gray-700">
       <div className="p-5">
         <a href="#">
-          <h5 className="mb-2 capitalize text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 capitalize text-2xl font-bold tracking-tight  text-white">
             {Label}
           </h5>
         </a>
-        <p className="mb-3 md:w-3/4 font-normal text-gray-700 dark:text-gray-400">
+        <p className="mb-3 md:w-3/4 font-normal  text-gray-400">
           {LabelContent}
         </p>
         <div className="flex w-full justify-end">
