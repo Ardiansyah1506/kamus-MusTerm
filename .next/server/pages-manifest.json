@@ -4,5 +4,6 @@
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/terminologi": "pages/terminologi.js",
-  "/terminologi/[cat]": "pages/terminologi/[cat].js"
+  "/terminologi/[cat]": "pages/terminologi/[cat].js",
+  "/patologi": "pages/patologi.js"
 }

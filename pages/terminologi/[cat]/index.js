@@ -183,11 +183,11 @@ export async function getServerSideProps(context) {
 
   try {
     const url = query.q
-      ? `/search/terminologi?q=${query.q}&cat=${category}`
-      : `/terminologi?cat=${category}`; // Menggunakan parameter pencarian jika ada
-    console.log("Requesting URL:", url); // Log the URL being requested
+      ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/search/terminologi?q=${query.q}&cat=${category}`
+      : `${process.env.NEXT_PUBLIC_BACKEND_URL}/terminologi?cat=${category}`;
+    console.log("Requesting URL:", url);
     const response = await axios.get(url);
-    console.log("Data received:", response.data); // Log the data received
+    console.log("Data received:", response.data);
     references = response.data;
   } catch (error) {
     console.error("Error fetching data:", error);
