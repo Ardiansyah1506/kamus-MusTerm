@@ -1,7 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/terminologi/[cat]": "pages/terminologi/[cat].js",
-  "/terminologi": "pages/terminologi.js"
-}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/anatomi/[id]/model":"pages/anatomi/[id]/model.html","/":"pages/index.html","/patologi/[id]/model":"pages/patologi/[id]/model.html","/terminologi":"pages/terminologi.html","/anatomi/[id]":"pages/anatomi/[id].js","/patologi/[id]":"pages/patologi/[id].js","/patologi/patologiDetail":"pages/patologi/patologiDetail.js","/anatomi":"pages/anatomi.js","/patologi":"pages/patologi.js","/terminologi/[cat]":"pages/terminologi/[cat].js","/_document":"pages/_document.js","/404":"pages/404.html"}
