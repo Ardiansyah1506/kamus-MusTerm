@@ -22,10 +22,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/patologi": [
+    "/terminologi": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/patologi.js"
+      "static/chunks/pages/terminologi.js"
     ],
     "/terminologi/[cat]": [
       "static/chunks/webpack.js",
