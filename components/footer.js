@@ -1,80 +1,97 @@
 import Link from "next/link";
+import Image from 'next/image';
 
 export const Footer = () => {
   return (
-    <footer>
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <Link href="https://flowbite.com/">
-            <div className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse cursor-pointer">
-              <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                © 2024{" "}
-                <Link href="https://flowbite.com/">
-                  <span className="hover:underline cursor-pointer">
-                    MusTerm
-                  </span>
-                </Link>
-                . All Rights Reserved.
-              </span>
+    <footer className="bg-white dark:bg-gray-900">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="md:flex md:justify-between">
+          <div className="flex flex-col gap-y-6 w-1/2">
+            <Link href="https://flowbite.com/" passHref>
+              <div className="flex items-center cursor-pointer">
+                <Image src={'/assets/image/logo.png'} className="h-8 me-3" alt="FlowBite Logo" width={32} height={32}/>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-blue-500">MusTerm</span>
+              </div>
+            </Link>
+            <div class="flex flex-col ml-4 text-white ">
+
+            <small className="w-3/4 fs-6 items-center mb-4 font-light">
+                Kamus Digital Terminologi Medis Sistem Muskuloskeletal, platform terdepan yang dirancang khusus untuk memudahkan para profesional medis, pelajar, dan siapa saja yang tertarik dalam bidang medis untuk memahami terminologi yang kompleks dan spesifik.
+            </small>
+            <div class="flex flex-col gap-y-1 text-sm">
+                <h2 class="font-semibold ">
+                    Ucapan Terimakasih Kepada
+                </h2>
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-1">
+                <span className="hover:underline cursor-pointer">Kementerian Pendidikan, Kebudayaan, Riset dan Teknologi</span>
+                </li>
+                <li className="mb-1">
+                    <span className="hover:underline cursor-pointer">Kemahasiswaan Dikti</span>
+                </li>
+                <li>
+                  <Link href="https://discord.gg/4eeurUVvTy">
+                    <span className="hover:underline cursor-pointer">Universitas Dian Nuswantoro</span>
+                  </Link>
+                </li>
+              </ul>
             </div>
-          </Link>
-          <ul className="flex flex-wrap gap-4 items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            <li>
-              <Link
-                href="https://www.instagram.com/pkmkc.musterm"
-                target="_blank"
-              >
-                <svg
-                  class="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>{" "}
-              </Link>
-            </li>
-            <li>
-              <Link href="https://x.com/pkmkc_musterm" target="_blank">
-                <svg
-                  class="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                </svg>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.tiktok.com/@musterm_" target="_blank">
-                <svg
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 50 50"
-                  aria-hidden="true"
-                >
-                  <path d="M9,4c-2.75042,0 -5,2.24958 -5,5v32c0,2.75042 2.24958,5 5,5h32c2.75042,0 5,-2.24958 5,-5v-32c0,-2.75042 -2.24958,-5 -5,-5zM9,6h32c1.67158,0 3,1.32842 3,3v32c0,1.67158 -1.32842,3 -3,3h-32c-1.67158,0 -3,-1.32842 -3,-3v-32c0,-1.67158 1.32842,-3 3,-3zM26.04297,10c-0.5515,0.00005 -0.99887,0.44655 -1,0.99805c0,0 -0.01098,4.87522 -0.02148,9.76172c-0.0053,2.44325 -0.01168,4.88902 -0.01562,6.73047c-0.00394,1.84145 -0.00586,3.0066 -0.00586,3.10352c0,1.81526 -1.64858,3.29883 -3.52734,3.29883c-1.86379,0 -3.35156,-1.48972 -3.35156,-3.35352c0,-1.86379 1.48777,-3.35156 3.35156,-3.35156c0.06314,0 0.1904,0.02075 0.4082,0.04688c0.28415,0.03406 0.56927,-0.05523 0.78323,-0.24529c0.21396,-0.19006 0.33624,-0.46267 0.33591,-0.74885v-4.20117c-0.00005,-0.528 -0.41054,-0.965 -0.9375,-0.99805c-0.15583,-0.0098 -0.35192,-0.0293 -0.58984,-0.0293c-5.24953,0 -9.52734,4.27782 -9.52734,9.52734c0,5.24953 4.27782,9.52734 9.52734,9.52734c5.24938,0 9.52734,-4.27782 9.52734,-9.52734v-9.04883c1.45461,1.16341 3.26752,1.90039 5.26953,1.90039c0.27306,0 0.53277,-0.01618 0.78125,-0.03906c0.51463,-0.04749 0.90832,-0.47927 0.9082,-0.99609v-4.66992c0.0003,-0.52448 -0.40463,-0.9601 -0.92773,-0.99805c-3.14464,-0.22561 -5.65141,-2.67528 -5.97852,-5.79102c-0.05305,-0.50925 -0.48214,-0.89619 -0.99414,-0.89648zM27.04102,12h2.28125c0.72678,3.2987 3.30447,5.8144 6.63672,6.44531v2.86523c-2.13887,-0.10861 -4.01749,-1.1756 -5.12305,-2.85742c-0.24284,-0.36962 -0.69961,-0.53585 -1.12322,-0.40877c-0.4236,0.12708 -0.71344,0.51729 -0.71272,0.95955v11.53516c0,4.16848 -3.35873,7.52734 -7.52734,7.52734c-4.16848,0 -7.52734,-3.35887 -7.52734,-7.52734c0,-4.00052 3.12077,-7.17588 7.05469,-7.43164v2.17578c-2.71358,0.25252 -4.87891,2.47904 -4.87891,5.25586c0,2.94421 2.40735,5.35352 5.35156,5.35352c2.92924,0 5.52734,-2.30609 5.52734,-5.29883c0,0.04892 0.00186,-1.25818 0.00586,-3.09961c0.0039,-1.84143 0.01037,-4.28722 0.01563,-6.73047c0.0094,-4.3869 0.0177,-7.91447 0.01953,-8.76367z"></path>
-                </svg>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.youtube.com/@MusTerm/videos"
-                target="_blank"
-              >
-                <svg className="h-5 w-5" fill="white" viewBox="0 0 50 50">
-                  <path d="M 24.402344 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.402344 16.898438 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.902344 40.5 17.898438 41 24.5 41 C 31.101563 41 37.097656 40.5 40.597656 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.097656 35.5 C 45.5 33 46 29.402344 46.097656 24.902344 C 46.097656 20.402344 45.597656 16.800781 45.097656 14.300781 C 44.699219 12.101563 42.800781 10.5 40.597656 10 C 37.097656 9.5 31 9 24.402344 9 Z M 24.402344 11 C 31.601563 11 37.398438 11.597656 40.199219 12.097656 C 41.699219 12.5 42.898438 13.5 43.097656 14.800781 C 43.699219 18 44.097656 21.402344 44.097656 24.902344 C 44 29.199219 43.5 32.699219 43.097656 35.199219 C 42.800781 37.097656 40.800781 37.699219 40.199219 37.902344 C 36.597656 38.601563 30.597656 39.097656 24.597656 39.097656 C 18.597656 39.097656 12.5 38.699219 9 37.902344 C 7.5 37.5 6.300781 36.5 6.101563 35.199219 C 5.300781 32.398438 5 28.699219 5 25 C 5 20.398438 5.402344 17 5.800781 14.902344 C 6.101563 13 8.199219 12.398438 8.699219 12.199219 C 12 11.5 18.101563 11 24.402344 11 Z M 19 17 L 19 33 L 33 25 Z M 21 20.402344 L 29 25 L 21 29.597656 Z"></path>
-                </svg>
-              </Link>
-            </li>
-          </ul>
         </div>
-        <hr className="border-gray-200 sm:mx-auto dark:border-gray-700 my-4" />
+
+          </div>
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <Link href="https://www.instagram.com/pkmkc.musterm"
+                target="_blank">
+                    <span className="hover:underline cursor-pointer">Instagram</span>
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link href="https://www.youtube.com/@MusTerm/videos">
+                    <span className="hover:underline cursor-pointer">Youtube</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://www.tiktok.com/@musterm_" target="_blank">
+                    <span className="hover:underline cursor-pointer">Tiktok</span>
+                  </Link>
+                </li>
+                <li>
+                <Link href="https://x.com/pkmkc_musterm" target="_blank">
+                    <span className="hover:underline cursor-pointer">X</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <Link href="https://wa.me/+6285701854470?text=Permisi" target="_blank">
+                    <span className="hover:underline cursor-pointer">+62 857 0185 4470</span>
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link href="https://wa.me/+6287772288998?text=Permisi" target="_blank">
+                    <span className="hover:underline cursor-pointer">+62 877 7228 8998</span>
+                  </Link>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div className="sm:flex items-center justify-center">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
+            <Link href="https://flowbite.com/">
+              <span className="hover:underline cursor-pointer"> MusTerm - PKM KC </span>
+            </Link>. All Rights Reserved.
+          </span>
+        </div>
       </div>
     </footer>
   );

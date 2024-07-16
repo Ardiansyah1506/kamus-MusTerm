@@ -1,7 +1,7 @@
 import Model from "../components/model/model";
-import { TerminologiButton } from "../components/terminologi/button";
 import PatologiButton from "../components/patologi/patologiButton";
 import AnatomiButton from "../components/anatomiButton";
+import TerminologiButton from "../components/terminologi/button";
 
 const Page = () => {
   return (
@@ -15,7 +15,7 @@ const Page = () => {
             </div>
             <div className="flex flex-col sm:justify-center md:text-start lg:text-[20px] text-white md:items-start">
               <h1 className="text-3xl font-extrabold leading-none md:text-4xl xl:text-5xl dark:text-white">
-                <span className="text-primary-blue">Kamus</span> Digital <br />{" "}
+                Kamus Digital <br />{" "}
                 Terminologi Medis <br /> Sistem Muskoloskeletal
               </h1>
 
