@@ -1,8 +1,6 @@
 import Model from "../components/model/model";
-import Link from "next/link";
 import { TerminologiButton } from "../components/terminologi/button";
 import PatologiButton from "../components/patologi/patologiButton";
-import { Footer } from "../components/footer";
 import AnatomiButton from "../components/anatomiButton";
 
 const Page = () => {
