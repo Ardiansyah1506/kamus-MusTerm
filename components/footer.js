@@ -41,7 +41,7 @@ export const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+              <h2 className="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <Link href="https://www.instagram.com/pkmkc.musterm"
@@ -67,7 +67,7 @@ export const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
+              <h2 className="mb-6 text-sm font-semibold uppercase text-white">Contact Us</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <Link href="https://wa.me/+6285701854470?text=Permisi" target="_blank">
