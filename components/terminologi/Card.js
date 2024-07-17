@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export const Card = ({ label }) => {
   const Label =
-    label === "root" ? "root" : label === "prefix" ? "prefix" : "suffix";
+    label === "root" ? "root" : label === "preffix" ? "preffix" : "suffix";
   const LabelContent =
     label === "root"
       ? "Istilah medis untuk menentukan subjek istilah"
-      : label === "prefix"
+      : label === "preffix"
       ? "Awalan dari suatu istilah yang merubah akar"
       : "Akhiran dari suatu istilah yang merubah akar";
 
@@ -37,7 +37,7 @@ export const Card = ({ label }) => {
 };
 
 export const CardList = () => {
-  const labels = ["root", "prefix", "suffix"];
+  const labels = ["root", "preffix", "suffix"];
 
   return (
     <div className="flex flex-wrap gap-4">
