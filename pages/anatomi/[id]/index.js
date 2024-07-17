@@ -1,184 +1,60 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import axios from "/fetch/axios";
-import { debounce } from "lodash";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoSearch } from "react-icons/io5";
+import axios from "../../../fetch/axios";
+import Model from "./model";
+import Image from 'next/image';
 
-const Anatomi = ({ references: initialReferences }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(5);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [references, setReferences] = useState(initialReferences);
-
-  useEffect(() => {
-    // Initialize search results on first load
-    fetchSearchResults(searchQuery);
-  }, []);
-
-  const handleItemsPerPageChange = (event) => {
-    setItemsPerPage(parseInt(event.target.value, 10));
-    setCurrentPage(1);
-  };
-
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const fetchSearchResults = async (query) => {
-    try {
-      const response = await axios.get(`/search/anatomi?q=${query}`);
-      setReferences(response.data);
-      setCurrentPage(1);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  const debouncedSearch = debounce((query) => {
-    fetchSearchResults(query);
-  }, 100);
-
-  const handleSearchChange = (event) => {
-    const value = event.target.value;
-    setSearchQuery(value);
-    debouncedSearch(value);
-  };
-
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = references.slice(indexOfFirstItem, indexOfLastItem);
-  const totalPages = Math.ceil(references.length / itemsPerPage);
-
-  // Helper function to truncate text
-  const truncateText = (text, maxLength) => {
-    return text.length > maxLength
-      ? text.substring(0, maxLength) + "..."
-      : text;
-  };
-
+const Anatomi = ({ anatomi }) => {
+  if (!anatomi) {
+    return (
+      <div className="container mx-auto p-4">Anatomi tidak ditemukan.</div>
+    );
+  }
   return (
-    <div className="container mx-auto flex justify-start items-start md:justify-center md:items-center">
-    <div className="relative lg:px-24 px-4 md:px-24 w-3/4 min-h-screen md:py-28 py-16">
-    <div className="flex max-w-full flex-col  items-center">
-      <h1 className="font-bold text-white text-3xl text-center items-center flex ml-8  w-full md:w-3/4">
-        Kamus Anatomi Medis Sistem Muskuloskeletal
-      </h1>
-        <div className='relative flex flex-1 w-full ml-8 md:w-3/4 pt-5'>
-            <input
-              type="text"
-              name=""
-              id=""
-              className="w-full border-gray-200 bg-gray-100 py-3 px-5 text-sm rounded-3xl"
-              value={searchQuery}
-              onChange={handleSearchChange}
-            />
-            <IoSearch className="right absolute right-3 top-7 h-6 w-5" />
-          </div>
-        </div>
-        <div className="pt-4 md:ml-0 ml-10 flex flex-col justify-center w-full items-center">
-          <div className="flex w-full flex-row text-white justify-between items-center">
-            <div className="text-xl font-bold">
-              <h1>Daftar Anatomi</h1>
-            </div>
-          
-          </div>
-          {currentItems.map((item) => (
-            <div
-              key={item.id}
-              className="flex flex-col w-full ml-4 gap-y-2 border-b-2 border-gray-600 mb-4"
-            >
-              <h1 className="text-white font-medium text-xl">{item.nama}</h1>
-              <small
-                dangerouslySetInnerHTML={{
-                  __html: truncateText(item.deskripsi, 150),
-                }}
-                className="text-white"
-              />
+    <div className="container mx-auto p-15 text-white ">
+      {anatomi.foto === "tengkorak.glb" ? (
+    <div className="pt-20">
+        <Model name={anatomi.foto}/>
+    </div>
 
-              <div className="flex w-full justify-end">
-                <Link
-                  href={`/anatomi/${item.id}`} // Link to specific terminology item, adjust URL as needed
-                  className="inline-flex px-3 py-2 text-sm font-medium text-white focus:outline-none"
-                >
-                  Lihat Selengkapnya
-                  <svg
-                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          ))}
-            <div className="mt-4 w-full  flex flex-col md:flex-row justify-center md:justify-between gap-3 ml-7 md:ml-0 items-center text-white">
-            <div>
-              <label htmlFor="itemsPerPage" className="mr-2">
-                Items per page:
-              </label>
-              <select
-                id="itemsPerPage"
-                value={itemsPerPage}
-                onChange={handleItemsPerPageChange}
-                className="px-2 py-1 bg-gray-800 rounded-md"
-              >
-                <option value={5}>5</option>
-                <option value={10}>10</option>
-                <option value={15}>15</option>
-                <option value={20} selected>20</option>
-              </select>
-            </div>
-            <div className="flex items-center">
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className="px-3 py-1 bg-gray-800 rounded-l-md"
-              >
-                Prev
-              </button>
-              <span className="px-3">
-                {currentPage} / {totalPages}
-              </span>
-              <button
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className="px-3 py-1 bg-gray-800 rounded-r-md"
-              >
-                Next
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      ) : (
+        <div className="pt-20 w-full justify-center items-center flex">
+                    <Image
+          src={`/assets/image/${anatomi.foto}`}
+          alt={anatomi.nama}
+          width={300}
+          height={300}
+        />
+    </div>
+    
+
+      )}
+      <h1 className="text-xl text-white font-bold">{anatomi.nama}</h1>
+      <div
+        dangerouslySetInnerHTML={{ __html: anatomi.deskripsi }}
+        className="font-light"
+      />
     </div>
   );
 };
 
 export async function getServerSideProps(context) {
-  let references = [];
-  const { query } = context;
+  const { id } = context.params;
 
   try {
-    const url = query.q ? `/search/anatomi?q=${query.q}` : "/anatomi"; // Menggunakan parameter pencarian jika ada
-    const response = await axios.get(url);
-    references = response.data;
+    const response = await axios.get(`/anatomi/${id}`);
+    if (response.data) {
+      return {
+        props: {
+          anatomi: response.data,
+        },
+      };
+    }
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching anatomi data:", error);
   }
 
   return {
     props: {
-      references,
+      anatomi: null,
     },
   };
 }

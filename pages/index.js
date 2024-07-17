@@ -14,7 +14,7 @@ const Page = () => {
               <Model />
             </div>
             <div className="flex tracking-wide flex-col sm:justify-center gap-10 md:text-start lg:text-[20px] text-white md:items-start">
-              <h1 className="text-3xl font-extrabold  md:text-4xl xl:text-5xl dark:text-white">
+              <h1 className="text-2xl font-extrabold  md:text-3xl xl:text-5xl dark:text-white">
                 Kamus Digital <br />{" "}
                 Terminologi Medis <br /> Sistem Muskoloskeletal
               </h1>
