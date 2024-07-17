@@ -15,10 +15,14 @@ const Navbar = (props) => {
       >
         <div className="flex w-full items-center justify-between">
         
-          <div className="flex items-center justify-center" >
-          <Image src={'/assets/image/logo.png'} width={50} height={60}/>
-          <h1 className="text-blue-500 text-xl font-bold">MusTerm</h1>
-          </div>
+        <div className="flex items-center justify-center">
+      <Link href="/">
+        <div className="flex items-center">
+          <Image src="/assets/image/logo.png" width={50} height={60} alt="Logo" />
+          <h1 className="text-blue-500 text-xl font-bold ml-2">MusTerm</h1>
+        </div>
+      </Link>
+    </div>
           <ul className="list-none hidden md:flex justify-end text-white items-start gap-4">
                 <li
                   className={`${
