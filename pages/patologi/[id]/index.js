@@ -11,7 +11,7 @@ const Patologi = ({ patologi }) => {
     <div className="container mx-auto p-4 text-white">
         <Model name={patologi.foto}/>
       <h1 className="text-xl text-white font-bold">{patologi.nama}</h1>
-      <div  dangerouslySetInnerHTML={{ __html: patologi.deskripsi }} className="font-light" />
+      <div  dangerouslySetInnerHTML={{ __html: patologi.deskripsi }} />
     </div>
   );
 };

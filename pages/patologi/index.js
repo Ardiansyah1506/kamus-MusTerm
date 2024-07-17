@@ -93,7 +93,7 @@ const Patologi = ({ references: initialReferences }) => {
               <h1 className="text-white font-medium text-xl">{item.nama}</h1>
               <small
                 dangerouslySetInnerHTML={{
-                  __html: truncateText(item.deskripsi, 150),
+                  __html: truncateText(item.deskripsi, 10),
                 }}
                 className="text-white"
               />
