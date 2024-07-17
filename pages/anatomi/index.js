@@ -7,7 +7,7 @@ import { IoSearch } from "react-icons/io5";
 
 const Anatomi = ({ references: initialReferences }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(2);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
   const [searchQuery, setSearchQuery] = useState("");
   const [references, setReferences] = useState(initialReferences);
 
@@ -79,7 +79,7 @@ const Anatomi = ({ references: initialReferences }) => {
         <div className="pt-4 md:ml-0 ml-10 flex flex-col justify-center w-full items-center">
           <div className="flex w-full flex-row text-white justify-between items-center">
             <div>
-              <h1>Referensi</h1>
+              <h1>Daftar Anatomi</h1>
             </div>
             <div>
               <IoIosArrowRoundForward size={40} className="font-bold" />
@@ -134,10 +134,10 @@ const Anatomi = ({ references: initialReferences }) => {
                 onChange={handleItemsPerPageChange}
                 className="px-2 py-1 bg-gray-800 rounded-md"
               >
-                <option value={2}>2</option>
-                <option value={4}>4</option>
-                <option value={6}>6</option>
-                <option value={8}>8</option>
+                  <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={15}>15</option>
+                <option value={20}>20</option>
               </select>
             </div>
             <div className="flex items-center">

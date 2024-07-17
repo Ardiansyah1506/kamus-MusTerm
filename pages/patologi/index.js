@@ -7,7 +7,7 @@ import { IoSearch } from "react-icons/io5";
 
 const Patologi = ({ references: initialReferences }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(2);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
   const [searchQuery, setSearchQuery] = useState("");
   const [references, setReferences] = useState(initialReferences);
 
@@ -60,11 +60,11 @@ const Patologi = ({ references: initialReferences }) => {
   return (
     <div className="container mx-auto flex justify-start items-start md:justify-center md:items-center">
     <div className="relative lg:px-24 px-4 md:px-24 w-3/4 min-h-screen md:py-28 py-16">
-    <div className="flex max-w-full flex-col  items-center">
-      <h1 className="font-bold text-white text-3xl text-center items-center flex ml-8 md:ml-0 w-full md:w-3/4">
+    <div className="flex max-w-full flex-col items-center">
+      <h1 className="font-bold text-white text-3xl text-center items-center flex ml-8  w-full md:w-3/4">
         Kamus Patologi Medis Sistem Muskuloskeletal
       </h1>
-        <div className='relative flex flex-1 w-full ml-14 md:ml-0 md:w-3/4 pt-5'>
+        <div className='relative flex flex-1 w-full ml-8 md:w-3/4 pt-5'>
             <input
               type="text"
               name=""
@@ -78,22 +78,20 @@ const Patologi = ({ references: initialReferences }) => {
         </div>
         <div className="pt-4 md:ml-0 ml-10 flex flex-col justify-center w-full items-center">
           <div className="flex w-full flex-row text-white justify-between items-center">
-            <div>
-              <h1>Referensi</h1>
+          <div className="text-xl font-bold mb-2">
+              <h1>Daftar Patologi</h1>
             </div>
-            <div>
-              <IoIosArrowRoundForward size={40} className="font-bold" />
-            </div>
+            
           </div>
           {currentItems.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col w-full gap-y-2 border-b-2 border-gray-600 mb-4"
+              className="flex flex-col w-full ml-4 gap-y-2 border-b-2 border-gray-600 mb-4"
             >
               <h1 className="text-white font-medium text-xl">{item.nama}</h1>
               <small
                 dangerouslySetInnerHTML={{
-                  __html: truncateText(item.deskripsi, 10),
+                  __html: truncateText(item.deskripsi, 200),
                 }}
                 className="text-white"
               />
@@ -103,7 +101,7 @@ const Patologi = ({ references: initialReferences }) => {
                   href={`/patologi/${item.id}`} // Link to specific terminology item, adjust URL as needed
                   className="inline-flex px-3 py-2 text-sm font-medium text-white focus:outline-none"
                 >
-                  Lihat Referensi
+                  Lihat Selengkapnya
                   <svg
                     className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                     aria-hidden="true"
@@ -134,10 +132,10 @@ const Patologi = ({ references: initialReferences }) => {
                 onChange={handleItemsPerPageChange}
                 className="px-2 py-1 bg-gray-800 rounded-md"
               >
-                <option value={2}>2</option>
-                <option value={4}>4</option>
-                <option value={6}>6</option>
-                <option value={8}>8</option>
+               <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={15}>15</option>
+                <option value={20} selected>20</option>
               </select>
             </div>
             <div className="flex items-center">

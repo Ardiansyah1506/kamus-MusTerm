@@ -5,9 +5,9 @@ import axios from "../../../fetch/axios";
 import { debounce } from "lodash";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-const Patologi = ({ references: initialReferences, initialCategory }) => {
+const Terminologi = ({ references: initialReferences, initialCategory }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(2);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
   const [searchQuery, setSearchQuery] = useState("");
   const [references, setReferences] = useState(initialReferences);
   const [category, setCategory] = useState(initialCategory);
@@ -140,14 +140,11 @@ const Patologi = ({ references: initialReferences, initialCategory }) => {
                 onChange={handleItemsPerPageChange}
                 className="px-2 py-1 bg-gray-800 rounded-md"
               >
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-                <option value={4}>4</option>
-                <option value={5} selected>5</option>
-                <option value={6}>6</option>
-                <option value={7}>7</option>
-                <option value={8}>8</option>
+                <option value={10}>10</option>
+                <option value={15}>15</option>
+                <option value={20}>20</option>
+                <option value={25}>25</option>
+                <option value={30}>30</option>
               </select>
             </div>
             <div className="flex items-center">
@@ -185,13 +182,10 @@ export async function getServerSideProps(context) {
     const url = query.q
       ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/search/terminologi?q=${query.q}&cat=${category}`
       : `${process.env.NEXT_PUBLIC_BACKEND_URL}/terminologi?cat=${category}`;
-    console.log("Requesting URL:", url);
     const response = await axios.get(url);
-    console.log("Data received:", response.data);
     references = response.data;
   } catch (error) {
     console.error("Error fetching data:", error);
-    console.log(url)
     references = [];
   }
 
@@ -203,4 +197,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Patologi;
+export default Terminologi;
