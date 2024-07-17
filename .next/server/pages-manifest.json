@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/anatomi/[id]": "pages/anatomi/[id].js",
   "/anatomi": "pages/anatomi.js",
+  "/anatomi/[id]": "pages/anatomi/[id].js",
   "/terminologi": "pages/terminologi.js"
 }
