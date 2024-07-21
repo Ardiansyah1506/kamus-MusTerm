@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/patologi": "pages/patologi.js",
-  "/": "pages/index.js",
-  "/anatomi": "pages/anatomi.js"
+  "/anatomi": "pages/anatomi.js",
+  "/anatomi/[id]": "pages/anatomi/[id].js"
 }
