@@ -90,7 +90,7 @@ export const Footer = () => {
                     <div class="flex gap-2 justify-start items-center">
                       <IoLogoTiktok />
                       <span className="hover:underline cursor-pointer">
-                        Youtube
+                        Tiktok
                       </span>
                     </div>
                   </Link>
