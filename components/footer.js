@@ -7,7 +7,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 mt-16">
+    <footer className="mt-16 bg-white/5 backdrop-blur-md border-t border-white/10">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex w-full md:justify-between">
           <div className="flex flex-col gap-y-6 w-1/2">
@@ -15,7 +15,7 @@ export const Footer = () => {
               <div className="flex items-center cursor-pointer">
                 <Image
                   src={"/assets/image/logo.png"}
-                  className="h-8 me-3"
+                  className="me-3"
                   alt="FlowBite Logo"
                   width={32}
                   height={32}
@@ -25,15 +25,15 @@ export const Footer = () => {
                 </span>
               </div>
             </Link>
-            <div class="flex flex-col ml-4 text-white ">
+            <div className="flex flex-col ml-4 text-white ">
               <small className="w-3/4 fs-6 items-center mb-4 font-light ">
                 Kamus Digital Terminologi Medis Sistem Muskuloskeletal, platform
                 terdepan yang dirancang khusus untuk memudahkan para profesional
                 medis, pelajar, dan siapa saja yang tertarik dalam bidang medis
                 untuk memahami terminologi yang kompleks dan spesifik.
               </small>
-              <div class="flex flex-col gap-y-1 text-sm">
-                <h2 class="font-semibold ">Ucapan Terimakasih Kepada</h2>
+              <div className="flex flex-col gap-y-1 text-sm">
+                <h2 className="font-semibold ">Ucapan Terimakasih Kepada</h2>
                 <ul className="text-gray-200 font-medium">
                   <li className="mb-1 text-gray-300">
                     <span className="hover:underline cursor-pointer text-gray-300">
@@ -67,7 +67,7 @@ export const Footer = () => {
                     href="https://www.instagram.com/pkmkc.musterm"
                     target="_blank"
                   >
-                    <div class="flex gap-2 justify-start items-center">
+                    <div className="flex gap-2 justify-start items-center">
                       <FaInstagram size={20} />
                       <span className="hover:underline cursor-pointer">
                         Instagram
@@ -77,7 +77,7 @@ export const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <Link href="https://www.youtube.com/@MusTerm/videos">
-                    <div class="flex gap-2 justify-start items-center">
+                    <div className="flex gap-2 justify-start items-center">
                       <AiOutlineYoutube size={20} />
                       <span className="hover:underline cursor-pointer">
                         Youtube
@@ -87,7 +87,7 @@ export const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <Link href="https://www.tiktok.com/@musterm_" target="_blank">
-                    <div class="flex gap-2 justify-start items-center">
+                    <div className="flex gap-2 justify-start items-center">
                       <IoLogoTiktok />
                       <span className="hover:underline cursor-pointer">
                         Tiktok
@@ -97,7 +97,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Link href="https://x.com/pkmkc_musterm" target="_blank">
-                    <div class="flex gap-2 justify-start items-center">
+                    <div className="flex gap-2 justify-start items-center">
                       <FaSquareXTwitter />
                       <span className="hover:underline cursor-pointer text-gray-300">
                         X / Twitter

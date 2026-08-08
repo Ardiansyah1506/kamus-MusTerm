@@ -9,11 +9,12 @@ const Navbar = (props) => {
   const [toggle, setToggle] = useState(false);
   return (
     <>
+      <div className="fixed top-6 left-0 right-0 z-50 flex justify-center w-full px-4">
       <nav
-        className="w-full fixed px-6 z-20 py-3 sm:px-6 inset-x-0 top-0 justify-between flex items-center"
+        className="w-full max-w-5xl glass-pill px-6 py-3 flex items-center justify-between"
         {...props}
       >
-        <div className="flex w-full items-center justify-between">
+        <div className="flex w-full items-center justify-between relative">
         
         <div className="flex items-center justify-center">
       <Link href="/">
@@ -91,7 +92,7 @@ const Navbar = (props) => {
             <div
               className={`${
                 !toggle ? "hidden" : "flex"
-              } p-6 bg-slate-800 absolute top-16 right-0 mx-6 text-white my-1 min-w-[140px] z-10 rounded-xl`}
+              } p-6 glass-card absolute top-14 mt-2 right-0 text-white min-w-[200px] z-50 rounded-2xl flex-col shadow-2xl`}
             >
               <ul className="list-none flex justify-end items-start flex-col gap-4">
                 <li
@@ -153,6 +154,7 @@ const Navbar = (props) => {
           </div>
         </div>
       </nav>
+      </div>
     </>
   );
 };

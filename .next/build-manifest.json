@@ -1,42 +1,105 @@
 {
-  "polyfillFiles": [
-    "static/chunks/polyfills.js"
-  ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [],
-  "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
-  ],
-  "rootMainFiles": [],
   "pages": {
+    "/": [
+      "static/chunks/17ugc_le27jqz.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/32y0_q-fpbgrp.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/turbopack-3cd89vylhe853.js"
+    ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/2nafmxv2sh_1u.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/41gn7x-00vq9s.js",
+      "static/chunks/2gb0t14yy5s-a.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/0nr65rr_ob6ww.js",
+      "static/chunks/2dd16108y6z0b.css",
+      "static/chunks/turbopack-43dl7bedq3b7i.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/0qxln_u03rb2n.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/turbopack-19wve4sut_c3b.js"
     ],
     "/anatomi": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/anatomi.js"
+      "static/chunks/1fbejxo5lbq3l.js",
+      "static/chunks/3o5xwsicb-29g.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/0nr65rr_ob6ww.js",
+      "static/chunks/1iacwr_w372ej.js",
+      "static/chunks/turbopack-2n2km4ku123ps.js"
     ],
     "/anatomi/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/anatomi/[id].js"
+      "static/chunks/1z6abyqbkfcim.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/32y0_q-fpbgrp.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/turbopack-0i6sh4epbzcb3.js"
+    ],
+    "/anatomi/[id]/model": [
+      "static/chunks/2yxv3lv52g3s_.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/32y0_q-fpbgrp.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/turbopack-0ox9lwps59pyl.js"
     ],
     "/patologi": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/patologi.js"
+      "static/chunks/38xg6rcdh6uto.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/1iacwr_w372ej.js",
+      "static/chunks/0nr65rr_ob6ww.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/turbopack-2m4_1bp366rlc.js"
+    ],
+    "/patologi/[id]": [
+      "static/chunks/0_2aoan1zcebu.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/32y0_q-fpbgrp.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/turbopack-2ywkkpkr8qyep.js"
+    ],
+    "/patologi/[id]/model": [
+      "static/chunks/00lxn2k81tm6m.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/32y0_q-fpbgrp.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/turbopack-2kohblwx-9y91.js"
+    ],
+    "/patologi/patologiDetail": [
+      "static/chunks/0lt8ux2ba5y9l.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/turbopack-3we69yrfh_iys.js"
+    ],
+    "/terminologi": [
+      "static/chunks/243yvq2e25nxq.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/0nr65rr_ob6ww.js",
+      "static/chunks/turbopack-3643j-0ptaruh.js"
+    ],
+    "/terminologi/[cat]": [
+      "static/chunks/0ebu0owx8d2xm.js",
+      "static/chunks/3o5xwsicb-29g.js",
+      "static/chunks/1j4s9yw_gczy_.js",
+      "static/chunks/1w5zh9azx5jom.js",
+      "static/chunks/0nr65rr_ob6ww.js",
+      "static/chunks/1iacwr_w372ej.js",
+      "static/chunks/turbopack-3856l1e9pu8so.js"
     ]
   },
-  "ampFirstPages": []
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/L70dv3Zwo1veqfOweCDtO/_buildManifest.js",
+    "static/L70dv3Zwo1veqfOweCDtO/_ssgManifest.js",
+    "static/L70dv3Zwo1veqfOweCDtO/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pagesChunkGroupBootstrapParams": {},
+  "chunkLoadingGlobal": "TURBOPACK"
 }

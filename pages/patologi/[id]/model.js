@@ -30,21 +30,26 @@ const Model = ({ name }) => {
       }
   
       // Add lights
-      const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.6); 
       scene.add(ambientLight);
   
-      const directionalLightFront = new THREE.DirectionalLight(0xffffff, 5);
-      directionalLightFront.position.set(1, 1, 1).normalize();
+      const hemiLight = new THREE.HemisphereLight(0xffffff, 0x222222, 1.5);
+      hemiLight.position.set(0, 20, 0);
+      scene.add(hemiLight);
+
+      const directionalLightFront = new THREE.DirectionalLight(0xffffff, 2);
+      directionalLightFront.position.set(5, 5, 5).normalize();
       scene.add(directionalLightFront);
   
-      const directionalLightBack = new THREE.DirectionalLight(0xffffff, 5);
-      directionalLightBack.position.set(-1, -1, -1).normalize();
+      const directionalLightBack = new THREE.DirectionalLight(0xaaeeff, 1.5);
+      directionalLightBack.position.set(-5, -5, -5).normalize();
       scene.add(directionalLightBack);
   
       // Load GLTF model
       const loader = new GLTFLoader();
+      const modelPath = name.startsWith('/') ? name : `/assets/3D/${name}`;
       loader.load(
-        `/assets/3D/${name}`, // Ensure your model is in the public folder and named correctly
+        modelPath,
         (gltf) => {
           scene.add(gltf.scene);
           setLoading(false); // Model selesai di-load, set status loading ke false
@@ -61,6 +66,10 @@ const Model = ({ name }) => {
   
       // Add OrbitControls for user interaction
       const controls = new OrbitControls(camera, renderer.domElement);
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 2.0;
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
       controls.update();
   
       // Render loop

@@ -1,8 +1,16 @@
 {
+  "/": "pages/index.html",
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/patologi": "pages/patologi.js",
+  "/_error": "pages/_error.js",
   "/anatomi": "pages/anatomi.js",
-  "/anatomi/[id]": "pages/anatomi/[id].js"
+  "/anatomi/[id]": "pages/anatomi/[id].js",
+  "/anatomi/[id]/model": "pages/anatomi/[id]/model.html",
+  "/patologi": "pages/patologi.js",
+  "/patologi/[id]": "pages/patologi/[id].js",
+  "/patologi/[id]/model": "pages/patologi/[id]/model.html",
+  "/patologi/patologiDetail": "pages/patologi/patologiDetail.js",
+  "/terminologi": "pages/terminologi.html",
+  "/terminologi/[cat]": "pages/terminologi/[cat].js",
+  "/404": "pages/404.html"
 }
